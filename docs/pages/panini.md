@@ -1,6 +1,7 @@
 ---
 title: Panini
 description: A flat file compiler that powers our prototyping template. Create pages with consistent layouts and reusable partials with ease.
+video: 't_ekdBMj4cc'
 library:
   github: https://github.com/zurb/panini
   docs: https://github.com/zurb/panini
@@ -119,6 +120,16 @@ The `../` is added only on pages in a sub-folder, so the CSS can still be proper
 ## Helpers
 
 Helpers are special functions that manipulate content on the page. In addition to [Handlebars's built-in helpers](http://handlebarsjs.com/builtin_helpers.html), Panini includes a few custom helpers and you can add your own.
+
+### ifequal
+Displays the HTML inside the helper if the two values are equal. 
+```handlebars
+{{#ifequal foo bar}}
+  <p>foo and bar are equal</p>
+{{else}}
+  <p>foo and bar are not equal}}  
+{{/ifequal}}
+```
 
 ### ifpage
 
